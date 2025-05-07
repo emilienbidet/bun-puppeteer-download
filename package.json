@@ -1,0 +1,13 @@
+{
+    "name": "bun-puppeteer-download",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "bun run index.ts"
+    },
+    "dependencies": {
+        "puppeteer": "24.8.1"
+    },
+    "devDependencies": {
+        "@types/bun": "1.2.12"
+    }
+}

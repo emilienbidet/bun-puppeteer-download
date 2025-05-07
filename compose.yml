@@ -1,0 +1,15 @@
+services:
+  html-to-pdf:
+    container_name: html-to-pdf
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    platform: linux/amd64
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/"]
+      interval: 5s
+      timeout: 10s
+      retries: 3
